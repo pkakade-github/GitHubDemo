@@ -846,6 +846,16 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="143" title="Test_Updation">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">Test_Updation</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="144"/>
+              </clauses>
+            </apiCall>
           </steps>
         </clause>
       </clauses>
