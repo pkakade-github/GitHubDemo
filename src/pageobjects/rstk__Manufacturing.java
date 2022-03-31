@@ -51,6 +51,15 @@ public class rstk__Manufacturing {
 	@LinkType()
 	@FindBy(xpath = "//a[normalize-space(.)='Inventory Location IDs']")
 	public WebElement InventoryLocationIDs;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='Division Address']")
+	public WebElement divisionAddress;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='Scrap Reason Codes']")
+	public WebElement scrapReasonCodes;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='Terms Code']")
+	public WebElement termsCode;
 	
 	
 }
