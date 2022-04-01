@@ -43,8 +43,19 @@ public class rstk__Sylocid {
 	@ButtonType()
 	@FindBy(xpath = "//div[1]/table//span/input[2]")
 	public WebElement delete;
-	@ChoiceListType()
-	@FindBy(xpath = "//span/div/select")
-	public WebElement Site_1;
+	@BooleanType()
+	@FindBy(xpath = "//label[normalize-space(.)='Backflush Location']/parent::span/parent::th/following-sibling::td//input")
+	public WebElement backflushLocation;
+	@BooleanType()
+	@FindBy(xpath = "//label[normalize-space(.)='Inspection Order Location']/parent::span/parent::th/following-sibling::td//input")
+	public WebElement inspectionOrderLocation;
+	@BooleanType()
+	@FindBy(xpath = "//label[normalize-space(.)='Vendor Location']/parent::span/parent::th/following-sibling::td//input")
+	public WebElement vendorLocation;
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Issue Sequence for Backflush']/parent::span/parent::th/following-sibling::td//input")
+	public WebElement issueSequenceForBackflush;
+	
+	
 	
 }
