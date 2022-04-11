@@ -60,6 +60,15 @@ public class rstk__Manufacturing {
 	@LinkType()
 	@FindBy(xpath = "//a[normalize-space(.)='Terms Code']")
 	public WebElement termsCode;
+	@LinkType()
+	@VisualforceBy(componentXPath = "apex:outputPanel[not(@id)][2]//tr/td[5]/div[1]/div/div[2]/div/li[15]//a[1]")
+	public WebElement inventoryCommodityCode;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='VAT Class']")
+	public WebElement VATClass;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='Feature Category']")
+	public WebElement featureCategory;
 	
 	
 }
