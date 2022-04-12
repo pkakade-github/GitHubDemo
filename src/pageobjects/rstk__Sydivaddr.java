@@ -61,5 +61,8 @@ public class rstk__Sydivaddr {
 	@ButtonType()
 	@FindBy(xpath = "//div[1]/table//td[2]/span/input[2]")
 	public WebElement delete;
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Website']/parent::span/parent::th/following-sibling::td[1]//input")
+	public WebElement website1;
 	
 }
