@@ -20,6 +20,9 @@ public class MyPageObject {
 	@ButtonType()
 	@FindBy(xpath = "//input[@name='new']")
 	public WebElement New;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='SYDEFAULT']")
+	public WebElement Name;
 
 			
 }
