@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="0">
+<testCase id="13">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: QARSF_Admin (Test)">
@@ -14,7 +14,7 @@
           <value class="value" valueClass="string">Test</value>
         </argument>
         <argument id="uiApplicationName">
-          <value class="value" valueClass="string">Force_com</value>
+          <value class="value" valueClass="string">rstk__Force_com</value>
         </argument>
         <argument id="quickUiLogin">
           <value class="value" valueClass="boolean">true</value>
@@ -24,7 +24,7 @@
         </argument>
         <argument id="reuseConnectionName"/>
         <argument id="alreadyOpenBehaviour">
-          <value class="value" valueClass="string">Fail</value>
+          <value class="value" valueClass="string">Reuse</value>
         </argument>
         <argument id="privateBrowsingMode"/>
         <argument id="enableObjectIdLogging">
@@ -188,7 +188,97 @@
       <clauses>
         <clause name="substeps" testItemId="165">
           <steps>
-            <caseCall testCaseId="2301075f-e177-4927-8c11-49f9aeca0197" testCasePath="tests/System Setup/Callable/Create VAT Class.testcase" testItemId="168"/>
+            <caseCall testCaseId="2301075f-e177-4927-8c11-49f9aeca0197" testCasePath="tests/System Setup/Callable/Create VAT Class.testcase" testItemId="168">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">QARSF_Admin</value>
+                </argument>
+                <argument id="ip_VatClass">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="VATClass"/>
+                  </value>
+                </argument>
+                <argument id="ip_Description">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="Description"/>
+                  </value>
+                </argument>
+                <argument id="ip_ExemptClassification">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="ExemptClassification"/>
+                  </value>
+                </argument>
+                <argument id="ip_IntraEUCommunityVAT">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="IntraEUCommunityVAT"/>
+                  </value>
+                </argument>
+                <argument id="ip_IncomingVATAcc">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="IncomingVATAccount"/>
+                  </value>
+                </argument>
+                <argument id="ip_OutgoingVATAccount">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="OutgoingVATAccount"/>
+                  </value>
+                </argument>
+                <argument id="ip_VATClearingAccount">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="VATClearingAccount"/>
+                  </value>
+                </argument>
+                <argument id="ip_VATPercent">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="VATPercent"/>
+                  </value>
+                </argument>
+                <argument id="ip_VATRecoveryPercent">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="VATRecoveryPercent"/>
+                  </value>
+                </argument>
+                <argument id="ip_IntraEUCommunityVATPercent">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="IntraEUCommunityVATPercent"/>
+                  </value>
+                </argument>
+                <argument id="ip_POPriceExcludesVAT">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="POPriceExcludesVAT"/>
+                  </value>
+                </argument>
+                <argument id="ip_VATClassIsInactive">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="VATClassIsInactive"/>
+                  </value>
+                </argument>
+                <argument id="ip_Description1">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="Description"/>
+                  </value>
+                </argument>
+                <argument id="ip_description">
+                  <value class="variable">
+                    <path element="op_ExcelData_row"/>
+                    <path element="Description"/>
+                  </value>
+                </argument>
+              </arguments>
+            </caseCall>
             <apiCall apiId="com.provar.plugins.bundled.apis.Switch" name="Switch" testItemId="135" title="Switch: {GetSelectedEnvironment()}">
               <arguments>
                 <argument id="value">
@@ -386,7 +476,7 @@
                                   <value class="value" valueClass="string">false</value>
                                 </argument>
                                 <argument id="beforeWait">
-                                  <value class="uiWait" uri="default"/>
+                                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
                                 </argument>
                                 <argument id="afterWait">
                                   <value class="uiWait" uri="default"/>
@@ -419,7 +509,7 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="124" title="Set the Description field to Vat Class - Updated">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="124" title="Set the Description field to {op_ExcelDataEdit_row.Description}">
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=description"/>
@@ -428,7 +518,10 @@
                                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                                 </argument>
                                 <argument id="value">
-                                  <value class="value" valueClass="string">Vat Class - Updated</value>
+                                  <value class="variable">
+                                    <path element="op_ExcelDataEdit_row"/>
+                                    <path element="Description"/>
+                                  </value>
                                 </argument>
                                 <argument id="blur">
                                   <value class="value" valueClass="boolean">false</value>
@@ -443,13 +536,13 @@
                                   <value class="value" valueClass="string">false</value>
                                 </argument>
                                 <argument id="beforeWait">
-                                  <value class="uiWait" uri="default"/>
+                                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
                                 </argument>
                                 <argument id="afterWait">
-                                  <value class="uiWait" uri="default"/>
+                                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Set the Description field to Vat Class - Updated</value>
+                                  <value class="value" valueClass="string">Set the Description field to {op_ExcelDataEdit_row.Description}</value>
                                 </argument>
                                 <argument id="autoRetry"/>
                               </arguments>

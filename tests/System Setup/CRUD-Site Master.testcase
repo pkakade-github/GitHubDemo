@@ -88,7 +88,7 @@
                           <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
                             <workbookPath class="value" valueClass="string">templates/AutomationOrg/CRUD-Site Master.xlsx</workbookPath>
                             <worksheetName class="value" valueClass="string">Create_Site</worksheetName>
-                            <valuesRange class="value" valueClass="string">A1:E2</valuesRange>
+                            <valuesRange class="value" valueClass="string">A:E</valuesRange>
                           </sourceValue>
                         </parameterValueSource>
                       </parameterValueSources>
@@ -250,7 +250,7 @@
                                   <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
                                     <workbookPath class="value" valueClass="string">templates/AutomationOrg/CRUD-Site Master.xlsx</workbookPath>
                                     <worksheetName class="value" valueClass="string">Edit_Site</worksheetName>
-                                    <valuesRange class="value" valueClass="string">A1:E2</valuesRange>
+                                    <valuesRange class="value" valueClass="string">A:E</valuesRange>
                                   </sourceValue>
                                 </parameterValueSource>
                               </parameterValueSources>

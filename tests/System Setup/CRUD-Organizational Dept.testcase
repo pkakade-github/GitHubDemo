@@ -89,7 +89,7 @@
                           <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
                             <workbookPath class="value" valueClass="string">templates/AutomationOrg/CRUD-Organizational Dept.xlsx</workbookPath>
                             <worksheetName class="value" valueClass="string">Create_Org</worksheetName>
-                            <valuesRange class="value" valueClass="string">A1:H2</valuesRange>
+                            <valuesRange class="value" valueClass="string">A:H</valuesRange>
                           </sourceValue>
                         </parameterValueSource>
                       </parameterValueSources>
@@ -272,7 +272,7 @@
                                   <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
                                     <workbookPath class="value" valueClass="string">templates/AutomationOrg/CRUD-Organizational Dept.xlsx</workbookPath>
                                     <worksheetName class="value" valueClass="string">Edit_Org</worksheetName>
-                                    <valuesRange class="value" valueClass="string">A1:H2</valuesRange>
+                                    <valuesRange class="value" valueClass="string">A:H</valuesRange>
                                   </sourceValue>
                                 </parameterValueSource>
                               </parameterValueSources>

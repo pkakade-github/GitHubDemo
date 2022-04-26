@@ -69,6 +69,12 @@ public class rstk__Manufacturing {
 	@LinkType()
 	@FindBy(xpath = "//a[normalize-space(.)='Feature Category']")
 	public WebElement featureCategory;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='State/ Province Code']")
+	public WebElement stateProvinceCode;
+	@LinkType()
+	@VisualforceBy(componentXPath = "apex:outputPanel[not(@id)][2]//tr/td[5]/div[1]/div/div[2]/div/li[24]//a[1]")
+	public WebElement systemDefaults;
 	
 	
 }

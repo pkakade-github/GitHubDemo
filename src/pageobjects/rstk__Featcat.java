@@ -52,6 +52,15 @@ public class rstk__Featcat {
 		@BooleanType()
 		@FindBy(xpath = "//tr[1]//input[3]")
 		public WebElement select;
+		@TextType()
+		@FindByLabel(label = "Feature ID")
+		public WebElement featureID1;
+		@TextType()
+		@FindBy(name = "pg:fm:j_id185:j_id186:j_id190:j_id191:j_id200:j_id202:j_id203:gridpbs:gridTable:0:j_id258:0:j_id272")
+		public WebElement featureID2;
+		@TextType()
+		@FindBy(name = "pg:fm:j_id185:j_id186:j_id190:j_id191:j_id200:j_id202:j_id203:gridpbs:gridTable:0:j_id258:1:j_id272")
+		public WebElement featureDescription1;
 	}
 	@FindBy(id = "pg:fm:j_id185:j_id186:j_id190:j_id191:j_id200:j_id202:j_id203:gridpbs:gridTable:tb")
 	@PageTable(firstRowContainsHeaders = false, row = Table.class)
@@ -68,5 +77,14 @@ public class rstk__Featcat {
 	@ButtonType()
 	@FindBy(xpath = "//span[2]//input[@id='features_savebtn']")
 	public WebElement save2;
+	@TextType()
+	@FindBy(xpath = "//td/table//table/tbody/tr/td/table/tbody/tr/td[normalize-space(.)='Features']")
+	public WebElement tab_Features_lbl;
+	@ButtonType()
+	@FindBy(xpath = "//input[@name='popupCancelButton']")
+	public WebElement cancel;
+	@ButtonType()
+	@FindBy(xpath = "//span[2]//input[@id='features_savebtn']")
+	public WebElement save_Popup;
 	
 }
