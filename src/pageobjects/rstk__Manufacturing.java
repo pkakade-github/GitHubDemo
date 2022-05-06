@@ -75,6 +75,12 @@ public class rstk__Manufacturing {
 	@LinkType()
 	@VisualforceBy(componentXPath = "apex:outputPanel[not(@id)][2]//tr/td[5]/div[1]/div/div[2]/div/li[24]//a[1]")
 	public WebElement systemDefaults;
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='Cost Accounting User Control Record']")
+	public WebElement costAccountingUserControlRecord;
+	@LinkType()
+	@VisualforceBy(componentXPath = "apex:outputPanel[not(@id)][2]//tr/td[5]/div[1]/div/div[2]/div/li[5]//a[1]")
+	public WebElement manufacturingUsers;
 	
 	
 }
